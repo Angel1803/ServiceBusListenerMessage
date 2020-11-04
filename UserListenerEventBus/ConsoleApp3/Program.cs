@@ -16,8 +16,7 @@ namespace UserListenerServiceBus
     class Program
     {
         private static ServiceCollection services;
-        private static IEventBus eventBus;
-        private static ISubscriptionClient subscriptionClient;
+        //private static IEventBus eventBus;
 
         static void Main(string[] args)
         {
@@ -25,12 +24,9 @@ namespace UserListenerServiceBus
 
             //Asignamos services al ServiceCollection
             services = new ServiceCollection();
+
             //Llamamos al método para configurar la conexión
             ConfigurationServiceBusConnection(services);
-
-            var serviceProvider = services.BuildServiceProvider();
-            eventBus = serviceProvider.GetRequiredService<IEventBus>();
-
             ConfigureEventBusSuscribe(services);
 
             Console.ReadKey();
@@ -69,7 +65,7 @@ namespace UserListenerServiceBus
                 .AddJsonFile("appsettings.json", optional: true, reloadOnChange: true).Build();
 
             //Obtengo el nombre del cliente suscriptor desde el appsettings.json
-            var subscriptionClientName = builder.GetSection("TopicName").Value;
+            var subscriptionClientName = builder.GetSection("SubscriptionName").Value;
 
             services.AddSingleton<IEventBus, EventBusServiceBus>(sp => //sp = serviceprovider
             {
@@ -81,14 +77,16 @@ namespace UserListenerServiceBus
                 return new EventBusServiceBus(serviceBusPersisterConnection, logger, eventBusSubcriptionsManager, subscriptionClientName, iLifetimeScope);
             });
 
+            services.AddTransient<ClienteIntegrationEventHandler>();
             services.AddSingleton<IEventBusSubscriptionsManager, InMemoryEventBusSubscriptionsManager>();
+            //Configuracion de la suscripcion
         }
 
         public static void ConfigureEventBusSuscribe(IServiceCollection services)
         {
             //Llamamos al método genérico de la interfaz de IEventBus "Suscribe"
+            var eventBus = services.BuildServiceProvider().GetService<IEventBus>();
             eventBus.Subscribe<ServiceBusMessage, ClienteIntegrationEventHandler>();
-            services.AddTransient<ClienteIntegrationEventHandler>();
         }
     }
 }

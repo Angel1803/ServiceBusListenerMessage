@@ -39,25 +39,7 @@
             RegisterSubscriptionClientMessageHandler();
         }
 
-        public void Publish(IntegrationEvent @event)
-        {
-            var eventName = @event.GetType().Name.Replace(INTEGRATION_EVENT_SUFFIX, "");
-            var jsonMessage = JsonConvert.SerializeObject(@event);
-            var body = Encoding.UTF8.GetBytes(jsonMessage);
-
-            var message = new Message
-            {
-                MessageId = Guid.NewGuid().ToString(),
-                Body = body,
-                Label = eventName,
-            };
-
-            var topicClient = _serviceBusPersisterConnection.CreateModel();
-
-            topicClient.SendAsync(message)
-                .GetAwaiter()
-                .GetResult();
-        }
+        public void Publish(IntegrationEvent @event) { }
 
         public void SubscribeDynamic<TH>(string eventName)
             where TH : IDynamicIntegrationEventHandler
@@ -138,7 +120,7 @@
                 {
                     var eventName = $"{message.Label}{INTEGRATION_EVENT_SUFFIX}";
                     var messageData = Encoding.UTF8.GetString(message.Body);
-
+                    Console.WriteLine("Mensaje recibido: " + messageData);
                     // Complete the message so that it is not received again.
                     if (await ProcessEvent(eventName, messageData))
                     {
@@ -163,6 +145,7 @@
             var processed = false;
             if (_subsManager.HasSubscriptionsForEvent(eventName))
             {
+                Console.WriteLine("Entre");
                 using (var scope = _autofac.BeginLifetimeScope(AUTOFAC_SCOPE_NAME))
                 {
                     var subscriptions = _subsManager.GetHandlersForEvent(eventName);
