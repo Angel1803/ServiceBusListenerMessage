@@ -1,0 +1,12 @@
+C:\Users\miguel.garcia\source\repos\UserListenerEventBus\UserListenerEventBus\ServiceBus\bin\Debug\netstandard2.0\ServiceBus.deps.json
+C:\Users\miguel.garcia\source\repos\UserListenerEventBus\UserListenerEventBus\ServiceBus\bin\Debug\netstandard2.0\ServiceBus.dll
+C:\Users\miguel.garcia\source\repos\UserListenerEventBus\UserListenerEventBus\ServiceBus\bin\Debug\netstandard2.0\ServiceBus.pdb
+C:\Users\miguel.garcia\source\repos\UserListenerEventBus\UserListenerEventBus\ServiceBus\bin\Debug\netstandard2.0\EventBus.dll
+C:\Users\miguel.garcia\source\repos\UserListenerEventBus\UserListenerEventBus\ServiceBus\bin\Debug\netstandard2.0\EventBus.pdb
+C:\Users\miguel.garcia\source\repos\UserListenerEventBus\UserListenerEventBus\ServiceBus\obj\Debug\netstandard2.0\ServiceBus.csprojAssemblyReference.cache
+C:\Users\miguel.garcia\source\repos\UserListenerEventBus\UserListenerEventBus\ServiceBus\obj\Debug\netstandard2.0\ServiceBus.AssemblyInfoInputs.cache
+C:\Users\miguel.garcia\source\repos\UserListenerEventBus\UserListenerEventBus\ServiceBus\obj\Debug\netstandard2.0\ServiceBus.AssemblyInfo.cs
+C:\Users\miguel.garcia\source\repos\UserListenerEventBus\UserListenerEventBus\ServiceBus\obj\Debug\netstandard2.0\ServiceBus.csproj.CoreCompileInputs.cache
+C:\Users\miguel.garcia\source\repos\UserListenerEventBus\UserListenerEventBus\ServiceBus\obj\Debug\netstandard2.0\ServiceBus.csproj.CopyComplete
+C:\Users\miguel.garcia\source\repos\UserListenerEventBus\UserListenerEventBus\ServiceBus\obj\Debug\netstandard2.0\ServiceBus.dll
+C:\Users\miguel.garcia\source\repos\UserListenerEventBus\UserListenerEventBus\ServiceBus\obj\Debug\netstandard2.0\ServiceBus.pdb

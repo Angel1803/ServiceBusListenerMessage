@@ -1,0 +1,11 @@
+C:\Users\miguel.garcia\source\repos\UserListenerEventBus\UserListenerEventBus\ConsoleApp3\obj\Debug\netcoreapp2.1\UserListenerServiceBus.csprojAssemblyReference.cache
+C:\Users\miguel.garcia\source\repos\UserListenerEventBus\UserListenerEventBus\ConsoleApp3\obj\Debug\netcoreapp2.1\UserListenerServiceBus.AssemblyInfoInputs.cache
+C:\Users\miguel.garcia\source\repos\UserListenerEventBus\UserListenerEventBus\ConsoleApp3\obj\Debug\netcoreapp2.1\UserListenerServiceBus.AssemblyInfo.cs
+C:\Users\miguel.garcia\source\repos\UserListenerEventBus\UserListenerEventBus\ConsoleApp3\obj\Debug\netcoreapp2.1\UserListenerServiceBus.csproj.CoreCompileInputs.cache
+C:\Users\miguel.garcia\source\repos\UserListenerEventBus\UserListenerEventBus\ConsoleApp3\bin\Debug\netcoreapp2.1\appsettings.json
+C:\Users\miguel.garcia\source\repos\UserListenerEventBus\UserListenerEventBus\ConsoleApp3\bin\Debug\netcoreapp2.1\UserListenerServiceBus.deps.json
+C:\Users\miguel.garcia\source\repos\UserListenerEventBus\UserListenerEventBus\ConsoleApp3\bin\Debug\netcoreapp2.1\UserListenerServiceBus.runtimeconfig.json
+C:\Users\miguel.garcia\source\repos\UserListenerEventBus\UserListenerEventBus\ConsoleApp3\bin\Debug\netcoreapp2.1\UserListenerServiceBus.runtimeconfig.dev.json
+C:\Users\miguel.garcia\source\repos\UserListenerEventBus\UserListenerEventBus\ConsoleApp3\bin\Debug\netcoreapp2.1\UserListenerServiceBus.dll
+C:\Users\miguel.garcia\source\repos\UserListenerEventBus\UserListenerEventBus\ConsoleApp3\obj\Debug\netcoreapp2.1\UserListenerServiceBus.genruntimeconfig.cache
+C:\Users\miguel.garcia\source\repos\UserListenerEventBus\UserListenerEventBus\ConsoleApp3\bin\Debug\netcoreapp2.1\EventBus.dll
