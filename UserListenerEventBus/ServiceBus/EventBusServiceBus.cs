@@ -144,7 +144,6 @@
             var processed = false;
             if (_subsManager.HasSubscriptionsForEvent(eventName))
             {
-                Console.WriteLine("Entre");
                 using (var scope = _autofac.BeginLifetimeScope(AUTOFAC_SCOPE_NAME))
                 {
                     var subscriptions = _subsManager.GetHandlersForEvent(eventName);

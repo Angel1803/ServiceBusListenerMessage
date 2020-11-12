@@ -16,7 +16,6 @@ namespace UserListenerServiceBus
     class Program
     {
         private static ServiceCollection services;
-        //private static IEventBus eventBus;
 
         static void Main(string[] args)
         {
