@@ -2,6 +2,7 @@
 {
     using Autofac;
     using Microsoft.Azure.ServiceBus;
+    using Microsoft.Azure.ServiceBus.Management;
     using Microsoft.eShopOnContainers.BuildingBlocks.EventBus;
     using Microsoft.eShopOnContainers.BuildingBlocks.EventBus.Abstractions;
     using Microsoft.eShopOnContainers.BuildingBlocks.EventBus.Events;
@@ -19,6 +20,8 @@
         private readonly IEventBusSubscriptionsManager _subsManager;
         private readonly SubscriptionClient _subscriptionClient;
         private readonly ILifetimeScope _autofac;
+        private static ManagementClient managementClient;
+        private static SubscriptionDescription description;
         private readonly string AUTOFAC_SCOPE_NAME = "eshop_event_bus";
         private const string INTEGRATION_EVENT_SUFFIX = "IntegrationEvent";
 
@@ -30,7 +33,6 @@
             _serviceBusPersisterConnection = serviceBusPersisterConnection;
             _logger = logger ?? throw new ArgumentNullException(nameof(logger));
             _subsManager = subsManager ?? new InMemoryEventBusSubscriptionsManager();
-
             _subscriptionClient = new SubscriptionClient(serviceBusPersisterConnection.ServiceBusConnectionStringBuilder, subscriptionClientName);
             _autofac = autofac;
 
